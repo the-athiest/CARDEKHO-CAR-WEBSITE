@@ -1,0 +1,50 @@
+/* apply.css */
+.hero-header { padding:120px 5% 80px; text-align:center; background:var(--bg-slate); border-bottom:1px solid var(--glass-border); }
+.hero-header h1 { font-size:64px; font-weight:800; margin-bottom:20px; letter-spacing:-1px; color:var(--primary); }
+.hero-header p { color:var(--text-dim); font-size:20px; max-width:700px; margin:auto; }
+
+.container { max-width:800px; margin:-50px auto 100px; background:var(--bg-dark); padding:60px; border-radius:30px; border:1px solid var(--glass-border); box-shadow:var(--shadow-soft); position:relative; z-index:10; }
+h2 { font-size:36px; margin-bottom:40px; color:var(--text-main); text-align:center; }
+.input-group { margin-bottom:30px; }
+label { display:block; margin-bottom:12px; color:var(--text-main); font-weight:600; font-size:15px; }
+input, select, textarea { width:100%; padding:16px 20px; background:var(--glass); border:1px solid var(--glass-border); border-radius:14px; color:var(--text-main); font-family:inherit; transition:var(--transition); font-size:16px; }
+input:focus, select:focus, textarea:focus { border-color:var(--primary); background:rgba(255,255,255,0.05); outline:none; box-shadow:0 0 0 4px rgba(255,60,0,0.1); }
+.radio-options, .options1 { display:flex; gap:30px; margin-top:15px; flex-wrap:wrap; }
+.radio-item, .option-inline1 { display:flex; align-items:center; gap:12px; cursor:pointer; color:var(--text-dim); font-size:16px; padding:15px 25px; background:var(--glass); border:1px solid var(--glass-border); border-radius:50px; transition:var(--transition); }
+.radio-item:hover, .option-inline1:hover { border-color:var(--primary); color:white; }
+input[type="radio"], input[type="checkbox"] { width:20px; height:20px; accent-color:var(--primary); cursor:pointer; }
+button { width:100%; padding:20px; background:var(--primary); color:white; border:none; border-radius:16px; font-size:18px; font-weight:700; cursor:pointer; transition:var(--transition); margin-top:20px; text-transform:uppercase; letter-spacing:1px; }
+button:hover { transform:translateY(-5px); box-shadow:0 15px 30px -5px rgba(255,60,0,0.5); }
+button a { text-decoration:none; color:white; display:block; width:100%; }
+.finance-guide { padding:120px 5%; background:var(--bg-slate); border-top:1px solid var(--glass-border); border-bottom:1px solid var(--glass-border); }
+.finance-guide h2 { font-size:48px; font-weight:800; text-align:center; margin-bottom:70px; color:var(--text-main); }
+.guide-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:40px; max-width:1400px; margin:auto; }
+@media (max-width:900px) { .guide-grid { grid-template-columns:1fr; } }
+.guide-card { padding:60px 40px; background:var(--bg-dark); border-radius:30px; border:1px solid var(--glass-border); text-align:center; transition:all 0.4s ease; position:relative; overflow:hidden; }
+.guide-card::before { content:''; position:absolute; inset:0; background:var(--primary); width:0; transition:width 0.5s cubic-bezier(0.4,0,0.2,1); z-index:0; }
+.guide-card:hover::before { width:100%; }
+.guide-card:hover { transform:translateY(-15px); border-color:var(--primary); box-shadow:0 30px 60px rgba(0,0,0,0.6); }
+
+.guide-icon { position:relative; z-index:1; width:100px; height:100px; background:rgba(255, 60, 0, 0.1); border:1px solid var(--primary); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 30px; transition:var(--transition); }
+.guide-icon i { font-size:42px; color:var(--primary); transition:var(--transition); }
+.guide-card:hover .guide-icon { background:white; transform:rotateY(360deg); }
+.guide-card:hover .guide-icon i { color:var(--primary); }
+
+.guide-card h3 { position:relative; z-index:1; font-size:28px; margin-bottom:15px; color:var(--text-main); transition:color 0.3s; }
+.guide-card p { position:relative; z-index:1; color:var(--text-dim); font-size:16px; line-height:1.7; transition:color 0.3s; }
+.guide-card:hover h3, .guide-card:hover p { color:white; }
+
+.page-center { padding:100px 5%; background:var(--bg-dark); }
+.loan-card { max-width:1000px; margin:auto; background:var(--glass); padding:80px; border-radius:40px; border:1px solid var(--glass-border); }
+.form-row { display:flex; gap:40px; margin-bottom:30px; }
+.form-group { flex:1; }
+
+.faq { padding:100px 5%; max-width:1000px; margin:auto; }
+details { background:var(--glass); border:1px solid var(--glass-border); border-radius:20px; margin-bottom:20px; padding:30px; cursor:pointer; transition:var(--transition); }
+details[open] { background:rgba(255,255,255,0.05); border-color:var(--primary); }
+summary { font-weight:600; font-size:20px; list-style:none; position:relative; }
+summary::after { content:'+'; position:absolute; right:0; color:var(--primary); font-size:24px; }
+details[open] summary::after { content:'-'; }
+details p { margin-top:20px; color:var(--text-dim); line-height:1.8; font-size:16px; }
+
+@media (max-width:768px) { .form-row { flex-direction:column; gap:15px; } .hero-header h1 { font-size:42px; } .container, .loan-card { padding:40px 20px; } }

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Online | CarDekho Financing</title>
+    <link rel="stylesheet" href="./CSS/common.css">
+    <link rel="stylesheet" href="./CSS/apply.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="./img/image.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="./index.html"><img src="./img/carDekho-newLogo.svg" alt="CarDekho Logo"></a></div>
+            <div class="nav-container">
+                <input type="checkbox" id="nav-toggle" class="nav-toggle"><label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+                <ul class="nav-links">
+                    <li><a href="./index.html">Home</a></li><li><a href="./about.html">About</a></li><li><a href="./apply.html">Buy Now</a></li><li><a href="./brands.html">Brands</a></li><li><a href="./blog.html">Blog</a></li><li><a href="./career.html">Career</a></li><li><a href="./gallery.html">Gallery</a></li><li><a href="./contact.html">Contact</a></li>
+                <li class="nav-icons"><i class="fa-solid fa-magnifying-glass"></i><i class="fa-solid fa-cart-shopping"></i><i class="fa-solid fa-user"></i></li>
+                </ul>
+            </div>
+            </nav>
+    </header>
+
+    <div class="hero-header">
+        <h1>Drive Your Dream</h1>
+        <p>Expert automotive solutions tailored to your lifestyle. Apply below and start your journey with India's most trusted car platform.</p>
+    </div>
+
+    <div class="container">
+        <h2>Car Booking Form</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group"><label>First Name</label><input type="text" placeholder="John" required></div>
+                <div class="form-group"><label>Last Name</label><input type="text" placeholder="Doe" required></div>
+            </div>
+            <div class="form-row">
+                <div class="form-group"><label>Email Address</label><input type="email" placeholder="john@example.com"></div>
+                <div class="form-group"><label>Mobile Number</label><input type="tel" placeholder="+91 98765 43210"></div>
+            </div>
+            <div class="input-group">
+                <label>Car Brand</label>
+                <select>
+                    <option>Select Brand</option><option>Mercedes-Benz</option><option>Audi</option><option>Tesla</option><option>Porsche</option><option>BMW</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label>Estimated Budget (₹)</label>
+                <input type="number" placeholder="Enter amount">
+            </div>
+
+            <div class="input-group">
+                <label>Vehicle Condition</label>
+                <div class="radio-options">
+                    <label class="radio-item"><input type="radio" name="car"> <span>New Vehicle</span></label>
+                    <label class="radio-item"><input type="radio" name="car"> <span>Pre-Owned Certified</span></label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Required Services</label>
+                <div class="options1">
+                    <label class="option-inline1"><input type="checkbox"> <span>Test Drive</span></label>
+                    <label class="option-inline1"><input type="checkbox"> <span>Finance</span></label>
+                    <label class="option-inline1"><input type="checkbox"> <span>Exchange</span></label>
+                    <label class="option-inline1"><input type="checkbox"> <span>Insurance Check</span></label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Additional Message</label>
+                <textarea rows="5" placeholder="How can we help you tailor your experience?"></textarea>
+            </div>
+            <button type="submit"><a href="./contact.html#myfooter">Submit Application</a></button>
+        </form>
+    </div>
+
+    <section class="finance-guide">
+        <h2>Simplifying Car Finance</h2>
+        <div class="guide-grid">
+            <div class="guide-card">
+                <div class="guide-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                <h3>Check Eligibility</h3>
+                <p>Use our tools to instantly calculate your loan limit based on your credit score and financial history. Get results in under 30 seconds.</p>
+            </div>
+            <div class="guide-card">
+                <div class="guide-icon"><i class="fa-solid fa-percent"></i></div>
+                <h3>Compare Rates</h3>
+                <p>We partner with 20+ top banks and NBFCs to offer you the lowest interest rates — transparently, with zero hidden charges or processing fees.</p>
+            </div>
+            <div class="guide-card">
+                <div class="guide-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <h3>Get Approved</h3>
+                <p>Minimal documentation and lightning-fast AI-powered processing gets you an approved loan decision and behind the wheel in record time.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="page-center">
+        <div class="loan-card">
+            <h1 style="text-align: center; font-size: 42px; margin-bottom: 20px;">Fast-Track Loan Request</h1>
+            <p style="text-align: center; color: var(--text-dim); font-size: 18px; margin-bottom: 60px;">Get instant approval with competitive interest rates and flexible terms.</p>
+            <form class="loan-form">
+                <div class="form-row">
+                    <div class="form-group"><label>Applicant Name</label><input type="text" placeholder="Enter full name" required></div>
+                    <div class="form-group"><label>Email Address</label><input type="email" placeholder="Enter email" required></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="Enter mobile" required></div>
+                    <div class="form-group"><label>Employment Type</label>
+                        <select><option>Salaried</option><option>Self-Employed</option><option>Business Owner</option></select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group"><label>Car Price (₹)</label><input type="number" placeholder="₹ 5,00,000" required></div>
+                    <div class="form-group"><label>Down Payment (₹)</label><input type="number" placeholder="₹ 1,50,000" required></div>
+                    <div class="form-group"><label>Loan Tenure</label><input type="number" placeholder="Years (e.g. 5)" required></div>
+                </div>
+                <button type="submit" style="background: var(--text-main); color: var(--bg-dark);">Apply for Funding</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="faq">
+        <h2 style="text-align: center; margin-bottom: 60px; font-size: 42px;">Financing FAQ</h2>
+        <section class="faq-section">
+            <details><summary>How does a used car loan work?</summary><p>A used car loan allows you to finance the purchase of a pre-owned vehicle. Repay in monthly installments over an agreed tenure with interest. The lender may require documents like income proof and ID before approving the loan.</p></details>
+            <details><summary>What are the primary benefits?</summary><p>Used car loans offer easier ownership at lower prices, flexible tenure options, and competitive rates while maintaining your personal liquidity.</p></details>
+            <details><summary>Can I prepay my car loan early?</summary><p>Yes, most lenders allow full or partial prepayment of the loan before the tenure ends to reduce interest burden. Check your specific agreement for prepayment fees.</p></details>
+            <details><summary>What is standard eligibility for salaried individuals?</summary><p>Applicants generally must be between 21-60 years, have stable employment, and meet credit score thresholds. Salary slips, bank statements, and ID are required.</p></details>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section"><h2>Car Dehko</h2><p>India's premier automotive destination. We bridge the gap between dream and reality through verified luxury and unparalleled service.</p>
+                <div class="social-links"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></div></div>
+            <div class="footer-section"><h3>Quick Nav</h3><ul><li><a href="./index.html">Home</a></li><li><a href="./about.html">About Us</a></li><li><a href="./brands.html">Brands</a></li><li><a href="./blog.html">Blog</a></li><li class="nav-icons"><i class="fa-solid fa-magnifying-glass"></i><i class="fa-solid fa-cart-shopping"></i><i class="fa-solid fa-user"></i></li>
+                </ul></div>
+            <div class="footer-section"><h3>Services</h3><ul><li><a href="#">Loan Approval</a></li><li><a href="#">Insurance</a></li><li><a href="#">Car Appraisal</a></li><li><a href="#">Concierge</a></li><li class="nav-icons"><i class="fa-solid fa-magnifying-glass"></i><i class="fa-solid fa-cart-shopping"></i><i class="fa-solid fa-user"></i></li>
+                </ul></div>
+            <div class="footer-section"><h3>Our Hubs</h3><p><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</p><p><i class="fa-solid fa-phone"></i> +91 98765 43210</p><p><i class="fa-solid fa-envelope"></i> elite@cardehko.com</p></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 Car Dehko Pvt. Ltd. All rights reserved.</p></div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* contact.css */
+/* HERO SCROLL */
+.hero { background:url('./img/McLaren\ P1\ Poster.jpg') no-repeat center/cover; position:relative; padding:150px 20px; overflow:hidden; border-bottom:1px solid var(--glass-border); }
+.hero::before { content:''; position:absolute; inset:0; background:rgba(255,255,255,0.85); backdrop-filter:blur(5px); }
+.scroll-box { width:100%; overflow:hidden; white-space:nowrap; position:relative; z-index:10; }
+.scroll-content { display:inline-block; padding-left:100%; animation:scrollMove 15s linear infinite; }
+.scroll-content h1 { font-size:64px; color:var(--primary); letter-spacing:4px; margin-bottom:10px; text-transform:uppercase; font-weight:900; animation:scaleText 2s ease-in-out infinite alternate; }
+.scroll-content p { font-size:24px; color:var(--text-main); font-weight:600; letter-spacing:2px; animation:scaleText 2s ease-in-out infinite alternate; }
+@keyframes scrollMove { 0% { transform:translateX(0%); } 100% { transform:translateX(-100%); } }
+@keyframes scaleText { 0% { transform:scale(1); } 100% { transform:scale(1.05); } }
+
+/* MAIN GRID */
+.main { display:grid; grid-template-columns:1fr 1fr; gap:60px; padding:100px 5%; max-width:1400px; margin:auto; background:var(--bg-slate); }
+.left, .right { background:var(--bg-dark); padding:50px; border-radius:30px; border:1px solid var(--glass-border); box-shadow:var(--shadow-soft); }
+.left h2, .right h2 { font-size:42px; margin-bottom:25px; color:var(--primary); }
+.left > p { color:var(--text-dim); font-size:18px; margin-bottom:40px; line-height:1.7; }
+
+h3 { font-size:22px; margin-bottom:20px; color:var(--text-main); border-bottom:1px solid var(--glass-border); padding-bottom:10px; }
+.radio-box, .check-box { margin-bottom:40px; display:grid; grid-template-columns:1fr 1fr; gap:15px; }
+.radio-box label, .check-box label { display:flex; align-items:center; gap:10px; font-size:16px; color:var(--text-dim); cursor:pointer; padding:15px; background:var(--glass); border:1px solid var(--glass-border); border-radius:12px; transition:var(--transition); }
+.radio-box label:hover, .check-box label:hover { border-color:var(--primary); background:var(--bg-slate); color:var(--text-main); }
+input[type="radio"], input[type="checkbox"] { width:18px; height:18px; accent-color:var(--primary); }
+.contact-details p { margin-bottom:15px; font-size:18px; display:flex; align-items:center; gap:15px; }
+.contact-details p i { font-size:24px; color:var(--primary); width:30px; text-align:center; }
+
+.right input, .right textarea { width:100%; padding:20px 25px; margin-bottom:25px; border:1px solid var(--glass-border); border-radius:16px; background:var(--bg-slate); color:var(--text-main); font-size:16px; font-family:inherit; transition:var(--transition); }
+.right input:focus, .right textarea:focus { outline:none; border-color:var(--primary); background:rgba(255,255,255,0.05); }
+.right textarea { resize:vertical; }
+.right button { width:100%; padding:20px; background:var(--primary); color:white; border:none; border-radius:16px; cursor:pointer; font-size:18px; font-weight:800; text-transform:uppercase; letter-spacing:1px; transition:var(--transition); }
+.right button:hover { transform:translateY(-5px); box-shadow:0 15px 30px var(--primary-glow); background:var(--text-main); color:white; }
+
+/* LOCATIONS */
+.locations { padding:100px 5%; background:var(--bg-dark); }
+.locations-title { text-align:center; margin-bottom:80px; }
+.locations-title h1 { font-size:48px; margin-bottom:15px; }
+.locations-title p { font-size:18px; color:var(--text-dim); }
+
+.city-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:30px; max-width:1400px; margin:auto; }
+.city-card { padding:40px 20px; background:var(--bg-slate); border-radius:24px; border:1px solid var(--glass-border); text-align:center; transition:var(--transition); cursor:pointer; }
+.city-card:hover { transform:translateY(-15px); border-color:var(--primary); box-shadow:0 20px 40px rgba(0,0,0,0.5); background:var(--primary-glow); }
+.city-card img { width:80px; height:80px; margin-bottom:20px; filter:invert(0); opacity:0.8; transition:var(--transition); }
+.city-card:hover img { opacity:1; transform:scale(1.1); filter:invert(0.5) sepia(1) saturate(5) hue-rotate(330deg); }
+.city-card p { font-size:20px; font-weight:700; color:var(--text-main); }
+
+/* PREMIUM SHOWROOMS (NEW) */
+.showrooms { padding:100px 5%; background:var(--bg-slate); border-top:1px solid var(--glass-border); border-bottom:1px solid var(--glass-border); }
+.showrooms h2 { text-align:center; font-size:48px; margin-bottom:80px; }
+.showroom-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)); gap:40px; max-width:1400px; margin:auto; }
+.sr-card { position:relative; height:350px; border-radius:30px; overflow:hidden; border:1px solid var(--glass-border); }
+.sr-card img { width:100%; height:100%; object-fit:cover; transition:var(--transition); }
+.sr-card:hover img { transform:scale(1.1); filter:brightness(0.7); }
+.sr-info { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.95), transparent); display:flex; flex-direction:column; justify-content:flex-end; padding:40px; }
+.sr-info h3 { font-size:28px; margin-bottom:5px; border:none; padding:0; color:var(--primary); }
+.sr-info p { color:white; font-size:16px; }
+
+/* WHY GRID */
+.why { padding:100px 5%; background:var(--bg-dark); }
+.why h2 { text-align:center; font-size:48px; margin-bottom:80px; }
+.why-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px; max-width:1400px; margin:auto; }
+.why-grid div { background:var(--bg-slate); padding:50px; border-radius:24px; border:1px solid var(--glass-border); transition:var(--transition); text-align:center; }
+.why-grid div:hover { transform:translateY(-10px); border-color:var(--primary); background:var(--bg-slate); }
+.why-grid h4 { font-size:22px; color:var(--text-main); margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid var(--glass-border); }
+.why-grid p { color:var(--text-dim); line-height:1.7; }
+
+/* THANK YOU */
+.thankyou { background:linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') no-repeat center/cover; padding:150px 20px; display:flex; justify-content:center; align-items:center; }
+.thankyou-box { background:rgba(255,255,255,0.8); backdrop-filter:blur(15px); padding:80px 60px; border-radius:40px; text-align:center; max-width:600px; border:1px solid var(--primary); box-shadow:0 30px 60px rgba(0,0,0,0.1); }
+.thankyou-box h2 { color:var(--primary); font-size:48px; margin-bottom:20px; }
+.thankyou-box p { color:var(--text-main); font-size:20px; margin-bottom:30px; line-height:1.6; }
+.thankyou-box span { color:var(--primary); font-weight:900; font-size:24px; letter-spacing:4px; }
+
+@media(max-width:992px) { .main { grid-template-columns:1fr; } .radio-box, .check-box { grid-template-columns:1fr; } .scroll-content h1 { font-size:48px; } }

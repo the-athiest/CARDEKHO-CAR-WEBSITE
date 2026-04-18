@@ -1,0 +1,80 @@
+/* career.css */
+/* BANNER */
+.banner { position:relative; height:70vh; overflow:hidden; }
+.banner img { width:100%; height:100%; object-fit:cover; filter:brightness(0.5); transform:scale(1.05); animation:zoomBanner 20s infinite alternate; }
+@keyframes zoomBanner { from{transform:scale(1.0);} to{transform:scale(1.15);} }
+.banner-text { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 5%; background:linear-gradient(to top, rgba(15,23,42,1), transparent); }
+.banner-text h1 { font-size:72px; font-weight:800; text-transform:uppercase; letter-spacing:2px; margin-bottom:20px; text-shadow:0 10px 30px rgba(0,0,0,0.8); }
+.banner-text p { font-size:24px; color:var(--text-dim); }
+
+/* OPPORTUNITIES */
+.opportunities { padding:100px 5%; background:var(--bg-dark); }
+.opportunities h2 { text-align:center; font-size:48px; margin-bottom:80px; }
+.opportunity-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)); gap:40px; max-width:1400px; margin:auto; }
+.opp-card { background:var(--bg-slate); padding:50px 40px; border-radius:30px; box-shadow:var(--shadow-soft); border:1px solid var(--glass-border); transition:var(--transition); position:relative; overflow:hidden; z-index:1; }
+.opp-card::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg, transparent, var(--primary-glow)); z-index:-1; opacity:0; transition:var(--transition); }
+.opp-card:hover { transform:translateY(-15px); border-color:var(--primary); }
+.opp-card:hover::before { opacity:1; }
+.opp-card i { font-size:48px; color:var(--primary); margin-bottom:30px; display:inline-block; }
+.opp-card h3 { font-size:26px; margin-bottom:20px; }
+.opp-card p { color:var(--text-dim); font-size:16px; margin-bottom:30px; line-height:1.7; }
+.location { display:inline-block; background:var(--glass); padding:8px 20px; border-radius:50px; border:1px solid var(--primary); color:var(--primary); font-size:13px; font-weight:700; text-transform:uppercase; letter-spacing:1px; }
+
+/* PERKS (NEW) */
+.perks { padding:100px 5%; background:var(--bg-slate); border-top:1px solid var(--glass-border); border-bottom:1px solid var(--glass-border); }
+.perks h2 { text-align:center; font-size:48px; margin-bottom:80px; }
+.perks-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px; max-width:1400px; margin:auto; }
+.perk-card { padding:40px; text-align:center; background:var(--bg-dark); border-radius:24px; border:1px solid var(--glass-border); transition:var(--transition); }
+.perk-card:hover { transform:scale(1.05); border-color:var(--primary); }
+.perk-card i { font-size:40px; color:var(--primary); margin-bottom:20px; }
+.perk-card h4 { font-size:20px; margin-bottom:15px; }
+.perk-card p { font-size:14px; color:var(--text-dim); }
+
+/* LIFE GALLERY */
+.life-gallery { padding:100px 5%; background:var(--bg-dark); }
+.life-gallery h2 { font-size:48px; text-align:center; margin-bottom:80px; }
+.grid-overlay { display:grid; grid-template-columns:repeat(auto-fit, minmax(380px, 1fr)); gap:30px; }
+.img-overlay-box { position:relative; height:400px; border-radius:30px; overflow:hidden; border:1px solid var(--glass-border); cursor:pointer; }
+.img-overlay-box img { width:100%; height:100%; object-fit:cover; transition:transfrom 0.8s cubic-bezier(0.2, 1, 0.3, 1); }
+.img-content { position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,0.95) 0%, transparent 80%); display:flex; flex-direction:column; justify-content:flex-end; padding:40px; transform:translateY(20px); opacity:0; transition:var(--transition); }
+.img-overlay-box:hover img { transform:scale(1.1); filter:brightness(0.7); }
+.img-overlay-box:hover .img-content { transform:translateY(0); opacity:1; }
+.img-content h4 { font-size:28px; margin-bottom:10px; color:var(--primary); }
+.img-content p { font-size:16px; color:var(--text-main); }
+
+/* REQUIREMENTS */
+.requirements { display:flex; align-items:center; padding:120px 5%; gap:80px; background:var(--bg-slate); border-bottom:1px solid var(--glass-border); }
+.req-content { flex:1; }
+.req-content h2 { font-size:48px; margin-bottom:40px; }
+.req-content ul { list-style:none; }
+.req-content li { margin-bottom:25px; font-size:18px; color:var(--text-dim); display:flex; align-items:center; gap:20px; }
+.req-content i { color:var(--primary); font-size:24px; }
+.req-img { flex:1; }
+.req-img img { width:100%; border-radius:30px; box-shadow:-20px 20px 0 var(--primary); }
+
+/* PROCEDURE */
+.procedure { padding:120px 5%; background:var(--bg-dark); }
+.procedure h2 { font-size:48px; text-align:center; margin-bottom:100px; }
+.proc-flow { max-width:900px; margin:auto; display:flex; flex-direction:column; gap:60px; position:relative; }
+.proc-flow::before { content:''; position:absolute; left:40px; top:0; bottom:0; width:2px; background:var(--glass-border); z-index:0; }
+.proc-item { display:flex; align-items:center; gap:50px; position:relative; z-index:1; }
+.proc-num { width:80px; height:80px; background:var(--bg-slate); color:var(--primary); border:2px solid var(--primary); border-radius:50%; display:flex; justify-content:center; align-items:center; font-size:32px; font-weight:800; flex-shrink:0; box-shadow:0 0 30px var(--primary-glow); }
+.proc-info { background:var(--glass); padding:40px 50px; border-radius:30px; border:1px solid var(--glass-border); flex-grow:1; transition:var(--transition); }
+.proc-item:hover .proc-info { background:var(--bg-slate); border-color:var(--primary); transform:translateX(20px); }
+.proc-info h3 { font-size:26px; margin-bottom:15px; }
+.proc-info p { color:var(--text-dim); font-size:16px; line-height:1.7; }
+
+/* FORM */
+.apply-form-section { padding:120px 5%; background:url('./img/McLaren\ P1\ Poster.jpg') no-repeat fixed center/cover; position:relative; }
+.apply-form-section::before { content:''; position:absolute; inset:0; background:rgba(15,23,42,0.9); }
+.form-container { max-width:900px; margin:auto; background:var(--glass); padding:80px; border-radius:40px; backdrop-filter:blur(20px); border:1px solid var(--primary); box-shadow:0 30px 60px rgba(0,0,0,0.8); position:relative; z-index:10; }
+.apply-form-section h2 { font-size:56px; text-align:center; margin-bottom:60px; color:var(--primary); }
+.input-group { display:flex; gap:30px; margin-bottom:30px; }
+.field-wrap { flex:1; }
+.career-form input, .career-form textarea { width:100%; padding:20px 25px; border-radius:16px; border:1px solid var(--glass-border); background:var(--bg-dark); color:white; font-size:16px; font-family:inherit; transition:var(--transition); }
+.career-form input:focus, .career-form textarea:focus { border-color:var(--primary); outline:none; box-shadow:0 0 0 4px var(--primary-glow); }
+.career-form textarea { resize:vertical; margin-bottom:20px; }
+.apply-btn { width:100%; padding:25px; font-size:20px; font-weight:800; color:white; background:var(--primary); border:none; border-radius:16px; cursor:pointer; text-transform:uppercase; letter-spacing:2px; transition:var(--transition); }
+.apply-btn:hover { background:white; color:var(--bg-dark); transform:translateY(-5px); box-shadow:0 20px 40px rgba(255,255,255,0.2); }
+
+@media(max-width:992px) { .requirements { flex-direction:column; } .input-group, .proc-item { flex-direction:column; } .proc-flow::before { left:50%;} .proc-num { margin:auto; } .proc-item:hover .proc-info { transform:translateY(-10px); } }
